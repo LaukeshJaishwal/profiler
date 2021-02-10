@@ -1,1 +1,14 @@
-<p>profile-list works!</p>
+<div class="profile-container">
+	<div class="row">
+		<div class="col-md-3" *ngFor="let user of userList">
+			<div class="card">
+				<img class="card-img-top" [src]="user.avatar" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">{{user.first_name}}</h5>
+					<p class="card-text">{{user.email}}</p>
+					<a routerLink="/profile-view/{{user.id}}" class="btn btn-primary">View</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
